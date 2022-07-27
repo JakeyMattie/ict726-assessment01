@@ -17,6 +17,13 @@ body {
     background-color: var(--light);
 }
 
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .main-heading {
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1.5px;
@@ -29,9 +36,8 @@ body {
 
 nav {
     display: flex;
-    position: fixed;
     width: 100%;
-    background-color: var(--second-colour);
+    background-color: var(--main-colour);
     padding: 1em 0;
 }
 
@@ -46,13 +52,13 @@ nav > a {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--main-colour);
+    color: var(--second-colour);
 }
 
 .nav-link:focus,
 .nav-link:hover {
-    color: var(--dark);
-    text-shadow: 2px 2px var(--accent);
+    color: var(--accent);
+    text-shadow: 2px 2px var(--dark);
 }
 
 /* ===== BUTTONS */
@@ -69,7 +75,7 @@ button {
     margin-top: 1.5em;
     border: 0;
     padding: 0.5em;
-    width: 7.5rem;
+    width: 7.5em;
 }
 
 .btn-dark,
@@ -86,6 +92,15 @@ button {
     background-color: var(--dark);
     color: var(--accent);
     text-decoration: none;
+}
+
+/* ===== FOOTER */
+
+footer {
+    background-color: var(--main-colour);
+    color: var(--second-colour);
+    text-align: center;
+    padding: 1em 0;
 }
 
 /* ===== ABOUT ME */
@@ -139,7 +154,6 @@ button {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 10em 20em;
         grid-gap: 1em;
-        margin: 5em auto;
     }
 
     .about-portrait {
