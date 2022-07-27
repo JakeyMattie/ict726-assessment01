@@ -29,6 +29,8 @@ body {
 
 nav {
     display: flex;
+    position: fixed;
+    width: 100%;
     background-color: var(--second-colour);
     padding: 1em 0;
 }
