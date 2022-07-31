@@ -185,7 +185,7 @@ footer {
 .contactme-container {
     background-color: var(--main-colour);
     color: var(--second-colour);
-    width: 50%;
+    width: 80%;
     text-align: center;
     margin: 3em auto 1em;
     padding: 2.5em;
@@ -194,7 +194,7 @@ footer {
 .form-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 80%;
     margin: 0 auto 3em;
 }
 
