@@ -155,7 +155,8 @@ footer {
 /* ===== BLOG CONTENT */
 
 .callig-container,
-.dance-container {
+.dance-container,
+.upskill-container {
     text-align: center;
     padding: 3em;
     display: flex;
@@ -180,7 +181,8 @@ footer {
     margin-top: 3em;
 }
 
-.dance-photo {
+.dance-photo,
+.upskill-photo2 {
     margin-bottom: 1em;
 }
 
@@ -191,6 +193,10 @@ footer {
     gap: 1em;
     width: 100%;
     margin-bottom: 3em;
+}
+
+.upskill-photo {
+    display: none;
 }
 
 /* ===== FORMS */
@@ -352,6 +358,16 @@ form > *::placeholder {
 
     /* ===== BLOG CONTENT */
 
+    .dance-header,
+    .upskill-header {
+        color: var(--second-colour);
+        background-color: var(--main-colour);
+        width: fit-content;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 0.5em 1.25em;
+    }
+
     .callig-gallery {
         width: 100%;
         flex-direction: row;
@@ -378,12 +394,6 @@ form > *::placeholder {
         align-self: center;
         grid-row: 2 / 3;
         grid-column: 2 / 3;
-        color: var(--second-colour);
-        background-color: var(--main-colour);
-        width: fit-content;
-        height: fit-content;
-        margin: 0 auto;
-        padding: 0.5em 1.25em;
     }
 
     .dance-para {
@@ -405,6 +415,47 @@ form > *::placeholder {
         grid-row: 5 / -1;
         grid-column: 2 / 3;
         margin: 3em;
+    }
+
+    .upskill-container {
+        display: grid;
+        grid-template-rows: 75px repeat(2, 75px) 250px 100px repeat(3, auto);
+        grid-template-columns: 1.5fr repeat(2, 1fr) 3fr 2fr;
+    }
+
+    .upskill-photo {
+        grid-row: 1 / 5;
+        grid-column: 1 / 3;
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .upskill-photo2 {
+        grid-row: 3 / 6;
+        grid-column: 2 / -1;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0 72.5%;
+    }
+
+    .upskill-header {
+        grid-row: 2 / 4;
+        grid-column: 3 / -1;
+    }
+
+    .upskill-para {
+        grid-row: 6 / 7;
+        grid-column: 1 / -1;
+        padding: 2em;
+    }
+
+    .upskill-btn {
+        grid-row: 7 / -1;
+        grid-column: 1 / -1;
     }
 
     /* ===== FORMS */
