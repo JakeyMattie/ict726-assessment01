@@ -43,7 +43,8 @@ body {
 .photo {
     width: 300px;
     height: 350px;
-    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -51,6 +52,9 @@ body {
 .photo-landscape {
     width: 300px;
     min-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* ===== NAVIGATION BAR */
@@ -126,7 +130,9 @@ footer {
 
 /* ===== LANDING PAGE */
 
-.section1-photo {
+.section1-photo,
+.section1-photo2,
+.section1-photo3 {
     display: none;
 }
 
@@ -153,7 +159,6 @@ footer {
     align-items: center;
     justify-content: center;
     height: 80%;
-    transition: background 2s, background-position-x 0s;
 }
 
 .card-content {
@@ -203,6 +208,11 @@ footer {
     object-position: bottom;
     box-shadow: 10px 10px var(--main-colour);
     margin-bottom: 1.5em;
+}
+
+.about-portrait2,
+.about-portrait3 {
+    display: none;
 }
 
 .about-container {
@@ -318,17 +328,62 @@ form > *::placeholder {
         font-size: 3.5rem;
     }
 
+    /* ===== LANDING PAGE */
+
+    .main-container {
+        display: grid;
+        grid-template-columns: repeat(2, 150px) 1fr repeat(2, 150px) 1fr;
+        grid-template-rows: 50px 150px 125px 50px 125px 150px 50px auto;
+    }
+
+    .section1-photo {
+        display: block;
+        grid-row: 3 / 6;
+        grid-column: 2 / 5;
+        max-height: 100%;
+    }
+
+    .section1-photo2 {
+        display: block;
+        grid-row: 2 / 5;
+        grid-column: 1 / 3;
+        z-index: -1;
+    }
+
+    .section1-photo3 {
+        display: block;
+        grid-row: 4 / 7;
+        grid-column: 4 / 6;
+    }
+
+    .section1-container {
+        grid-row: 1 / 8;
+        grid-column: 6 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .section2-container {
+        grid-row: 8 / -1;
+        grid-column: 1 / -1;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
     /* ===== ABOUT ME */
 
     .about-container {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 10em 20em;
+        grid-template-columns: repeat(2, 150px) repeat(2, 1fr) 400px;
+        grid-template-rows: 75px auto 50px auto 75px;
         grid-gap: 1em;
     }
 
     .about-portrait {
-        grid-row: 1 / 3;
+        grid-row: 1 / 5;
         grid-column: 1 / 3;
         width: 100%;
         height: 100%;
@@ -336,21 +391,29 @@ form > *::placeholder {
     }
 
     .about-header {
-        grid-row: 1 / 2;
-        grid-column: 2 / -1;
+        grid-row: 2 / 3;
+        grid-column: 2 / 5;
         align-self: center;
         font-size: 5rem;
         margin: 0;
+        padding: 0 1em;
+        width: fit-content;
         background-color: var(--second-colour);
         box-shadow: 10px 10px var(--main-colour);
     }
 
-    .about-container > p {
-        grid-row: 2 / 3;
-        grid-column: 3 / -1;
+    .about-details {
+        grid-row: 3 / 5;
+        grid-column: 3 / 5;
         align-self: center;
         text-align: justify;
         padding-left: 1.5em;
+    }
+
+    .about-portrait2 {
+        grid-row: 4 / 6;
+        grid-column: 5 / -1;
+        display: block;
     }
 
     /* ===== BLOG */
