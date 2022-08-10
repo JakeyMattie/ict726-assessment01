@@ -43,7 +43,6 @@ body {
 .photo {
     width: 300px;
     height: 350px;
-    min-width: 100%;
     max-height: 100%;
     object-fit: cover;
     object-position: center;
@@ -332,8 +331,8 @@ form > *::placeholder {
 
     .main-container {
         display: grid;
-        grid-template-columns: repeat(2, 150px) 1fr repeat(2, 150px) 1fr;
-        grid-template-rows: 50px 150px 125px 50px 125px 150px 50px auto;
+        grid-template-columns: 2fr 1fr 3fr 1fr 2fr 6fr;
+        grid-template-rows: 50px 150px 125px 75px 75px 150px 50px auto;
     }
 
     .section1-photo {
@@ -341,13 +340,13 @@ form > *::placeholder {
         grid-row: 3 / 6;
         grid-column: 2 / 5;
         max-height: 100%;
+        z-index: -1;
     }
 
     .section1-photo2 {
         display: block;
         grid-row: 2 / 5;
         grid-column: 1 / 3;
-        z-index: -1;
     }
 
     .section1-photo3 {
